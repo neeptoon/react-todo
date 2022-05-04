@@ -1,3 +1,3 @@
-const selectAllPosition = (state) => state.position;
+const selectAllPosition = (state) => state.positions;
 
 export {selectAllPosition};
