@@ -3,6 +3,9 @@ import {ADD_FILTER, REMOVE_FILTER, CLEAR_FILTER} from "./filter-action";
 export const filterReducer = (store = [], action) => {
 	switch (action.type) {
 		case ADD_FILTER: {
+			if (store.includes(action.filter)) {
+				return store
+			}
 			return [...store, action.filter]
 		}
 		case REMOVE_FILTER: {
